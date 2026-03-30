@@ -1,0 +1,26 @@
+# NewCareer – Root .htaccess
+# Redirect everything through public/ while keeping direct asset access
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Force HTTPS in production (uncomment when SSL is available)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # If the request is for an existing file or directory, serve it directly
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Route everything else to public/index.php
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes
+
+# Deny access to sensitive directories from the web root
+<FilesMatch "\.(sql|log|env|htpasswd|json|lock|md)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
