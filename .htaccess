@@ -1,0 +1,9 @@
+Options -Indexes
+
+RewriteEngine On
+
+# Redirect to public directory
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteCond %{REQUEST_URI} !^/admin/
+RewriteCond %{REQUEST_URI} !^/assets/
+RewriteRule ^(.*)$ /public/$1 [L,NC]
