@@ -118,7 +118,7 @@ $currentUser = getCurrentUser();
                                             </button>
                                         <?php endif; ?>
                                         <button name="action" value="delete" class="btn btn-danger btn-xs"
-                                            onclick="return confirm('Delete user <?= htmlspecialchars(addslashes($u['username']), ENT_QUOTES, 'UTF-8') ?>? This cannot be undone.')">
+                                            onclick="return confirm('Delete user <?= htmlspecialchars($u['username'], ENT_QUOTES, 'UTF-8') ?>? This cannot be undone.')">
                                             Delete
                                         </button>
                                     </form>

@@ -145,7 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
 
                     <div class="form-actions">
-                        <button type="submit" class="btn btn-primary" <?= empty($resumes) ? '' : '' ?>>
+                        <button type="submit" class="btn btn-primary" <?= empty($resumes) ? 'disabled' : '' ?>>
                             Submit Application
                         </button>
                         <a href="view.php?id=<?= $jobId ?>" class="btn btn-outline">Cancel</a>
