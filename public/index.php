@@ -147,7 +147,7 @@ $user      = getCurrentUser();
                 <div class="step-card">
                     <div class="step-icon">🚀</div>
                     <h3>Apply with One Click</h3>
-                    <p>Send your resume and a personalised cover letter directly to employers.</p>
+                    <p>Send your resume and a personalized cover letter directly to employers.</p>
                 </div>
             </div>
         </div>
